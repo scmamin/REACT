@@ -1,0 +1,14 @@
+:root {
+    --main-color: #2c363f;
+    --main-background: #f2f5ea;
+  }
+  
+  
+header {
+    height: 10%;
+    min-height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid var(--main-color);
+  }
