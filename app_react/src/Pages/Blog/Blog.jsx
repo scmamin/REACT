@@ -1,8 +1,7 @@
-import "./Blog.css";
+import styles from "./Blog.module.css";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
+import Layout from "../../components/Layout/Layout.jsx";
 
 export default function Blog() {
   const [posts, setPosts] = useState([]);
@@ -35,19 +34,19 @@ export default function Blog() {
 
   return (
     <>
-      <Header />
-      <div className="blog">
-        <h2>Список постов</h2>
-        <ul>
-          {posts.map((post) => (
-            <Link key={post.id} to={`/blog/${post.id}`}>
-              <h3>{post.title}</h3>
-              <p>{post.body}</p>
-            </Link>
-          ))}
-        </ul>
-      </div>
-      <Footer />
+      <Layout>
+        <div className={styles.blog}>
+          <h2>Список постов</h2>
+          <ul>
+            {posts.map((post) => (
+              <Link key={post.id} to={`/blog/${post.id}`}>
+                <h3>{post.title}</h3>
+                <p>{post.body}</p>
+              </Link>
+            ))}
+          </ul>
+        </div>
+      </Layout>
     </>
   );
 }

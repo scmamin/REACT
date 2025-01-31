@@ -1,8 +1,7 @@
 import "./Post.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
+import Layout from "../../components/Layout/Layout.jsx";
 
 export default function Post() {
   const [post, setPost] = useState(null);
@@ -35,12 +34,12 @@ export default function Post() {
   if (error) return <p>Ошибка: {error}</p>;
   return (
     <>
-      <Header />
-      <div className="post">
-        <h2>{post.title}</h2>
-        <p>{post.body}</p>
-      </div>
-      <Footer />
+      <Layout>
+        <div className="post">
+          <h2>{post.title}</h2>
+          <p>{post.body}</p>
+        </div>
+      </Layout>
     </>
   );
 }

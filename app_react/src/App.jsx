@@ -1,19 +1,21 @@
 import "./App.css";
-import Layout from "./components/Layout/Layout";
-import Blog from "./components/Blog/Blog";
-import Works from "./components/Works/Works";
-import Review from "./components/Review/Review";
+import Main from "./Pages/Main/Main";
+import Blog from "./Pages/Blog/Blog";
+import Works from "./Pages/Works/Works";
+import Review from "./Pages/Review/Review";
+import Contacts from "./Pages/Contacts/Contacts";
 import Post from "./components/Post/Post";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Layout />} />
+      <Route path="/" element={<Main />} />
       <Route path="/blog" element={<Blog />} />
-      <Route path="/blog/:id" element={<Post />} /> {/* Динамический маршрут */}
+      <Route path="/blog/:id" element={<Post />} />
       <Route path="/works" element={<Works />} />
       <Route path="/review" element={<Review />} />
+      <Route path="/contacts" element={<Contacts />} />
     </Routes>
   );
 }
