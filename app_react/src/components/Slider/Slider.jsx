@@ -10,6 +10,7 @@ import Img1 from "../../assets/1.jpg";
 import Img2 from "../../assets/2.jpg";
 import Img3 from "../../assets/3.jpg";
 import styles from "./Slider.module.css";
+import Button from "../Button/Button";
 
 const SliderContext = createContext();
 
@@ -54,9 +55,9 @@ function Slider() {
     <div className={styles.slider}>
       <h2>Работы</h2>
       <div className={styles.slider_img}>
-        <button onClick={prevSlide}>&#8592;</button>
+        <Button className="button_slider" onClick={prevSlide} label="&#8592;" />
         <img src={slides[currentSlide]} alt={`Slide ${currentSlide + 1}`} />
-        <button onClick={nextSlide}>&#8594;</button>
+        <Button className="button_slider" onClick={nextSlide} label="&#8594;" />
       </div>
     </div>
   );
