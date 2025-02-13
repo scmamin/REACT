@@ -35,3 +35,11 @@ body {
   font-weight: 800;
   line-height: normal;
 }
+
+.light{
+  display: contents;
+}
+
+.dark{
+  display: contents;
+}
